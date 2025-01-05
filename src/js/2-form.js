@@ -42,7 +42,6 @@ const onFeedbackFormSubmit = event => {
   localStorage.removeItem('feedback-form-state');
   formData.email = '';
   formData.message = '';
-  console.log(formData);
 };
 
 form.addEventListener('change', onFormFieldChange);
