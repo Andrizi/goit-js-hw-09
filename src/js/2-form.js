@@ -17,7 +17,19 @@ if (savedDataFromLS) {
   }
 }
 
-const onFormFieldChange = event => {
+// const onFormFieldChange = event => {
+//   const { target: formFieldEl } = event;
+//   const fieldValue = formFieldEl.value;
+//   const fieldName = formFieldEl.name;
+//   formData[fieldName] = fieldValue;
+//   try {
+//     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+const onFormFieldInput = event => {
   const { target: formFieldEl } = event;
   const fieldValue = formFieldEl.value;
   const fieldName = formFieldEl.name;
@@ -44,5 +56,6 @@ const onFeedbackFormSubmit = event => {
   formData.message = '';
 };
 
-form.addEventListener('change', onFormFieldChange);
+//form.addEventListener('change', onFormFieldChange);
+form.addEventListener('input', onFormFieldInput);
 form.addEventListener('submit', onFeedbackFormSubmit);
